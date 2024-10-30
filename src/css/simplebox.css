@@ -1,0 +1,20 @@
+.sl-wrapper {
+  background-color: rgba(46, 47, 66, 0.8);
+}
+
+.sl-wrapper button {
+  color: #fff;
+}
+.sl-wrapper button.sl-close,
+.sl-wrapper .sl-navigation button.sl-next,
+.sl-wrapper .sl-navigation button.sl-prev {
+  color: #fff;
+  width: 24px;
+  height: 24px;
+  font-size: 36px;
+}
+.sl-wrapper div.sl-counter {
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+}
