@@ -13,7 +13,4 @@
 /* Sections style */
 @import url('./header.css');
 @import url('./back-link.css');
-@import url('./gallery.css');
-@import url('./simplebox.css');
-@import url('./form.css');
-             
+@import url('./timer.css');
