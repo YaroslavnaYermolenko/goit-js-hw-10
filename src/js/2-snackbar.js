@@ -29,8 +29,4 @@ function showAlert(ok) {
     });
   }, delay);
 }
-/*iziToast.error({
-        title: 'Error',
-        message: `Rejected promise in ${delay}ms`,//`Fulfilled promise in ${delay}ms`
-        position: 'topRight',
-      });*/
+
