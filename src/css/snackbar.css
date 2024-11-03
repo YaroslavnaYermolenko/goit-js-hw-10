@@ -1,0 +1,31 @@
+fieldset.snackbar-fieldset{
+    border-radius: 4px;
+    border-color:rgba(128, 128, 128, 1);
+    width:332px;
+    display: flex;
+    flex-direction: row;
+}
+.button-snackbar{
+    width:360px;
+    margin-top: 24px;
+}
+.form{    
+    margin-left: 156px;
+}
+input[name=delay]{
+    margin: 8px 0px 8px;
+    width: 326px;
+    border-color: #808080;
+}
+.snackbar-label{
+    display:flex;
+    flex-direction: row;
+    margin: 0;
+    width: auto;
+    color: #2E2F42;
+}
+.snackbar-checkbox{
+    margin: 0 8px 0 48px;
+    flex-direction: row;
+    width: auto;
+}

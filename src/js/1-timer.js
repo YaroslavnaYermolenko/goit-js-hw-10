@@ -15,6 +15,7 @@ const options = {
       iziToast.error({
         title: 'Error',
         message: 'Please choose a date in the future',
+        position: 'topRight',
       });
     } else {
       userSelectedDate = selectedDates[0];
@@ -57,6 +58,7 @@ class Timer {
         iziToast.success({
           title: 'Success',
           message: 'Time has come!',
+          position: 'topRight',
         });
         return;
       }

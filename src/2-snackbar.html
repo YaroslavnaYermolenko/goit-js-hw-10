@@ -4,19 +4,54 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Form</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+    <title>Snackbar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
 
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
-  <body><a class="back-link" href="./index.html">Go back</a>
-    
+  <body>
+    <a class="back-link" href="./index.html">Go back</a>
+
     <main>
-      
-      
-      
+      <form class="form">
+        <label>
+          Delay (ms)
+          <input type="number" name="delay" required />
+        </label>
+
+        <fieldset class="snackbar-fieldset">
+          <legend>State</legend>
+          <label class="snackbar-label">
+            <input
+              class="snackbar-checkbox"
+              type="radio"
+              name="state"
+              value="fulfilled"
+              required
+            />
+            Fulfilled
+          </label>
+          <label class="snackbar-label">
+            <input
+              class="snackbar-checkbox"
+              type="radio"
+              name="state"
+              value="rejected"
+              required
+            />
+            Rejected
+          </label>
+        </fieldset>
+
+        <button class="button-snackbar" type="submit">
+          Create notification
+        </button>
+      </form>
     </main>
     <script type="module" src="./js/2-snackbar.js"></script>
   </body>
