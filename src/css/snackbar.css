@@ -1,9 +1,11 @@
 fieldset.snackbar-fieldset{
     border-radius: 4px;
-    border-color:rgba(128, 128, 128, 1);
+    border: 1px solid #808080;
     width:332px;
     display: flex;
     flex-direction: row;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
 }
 .button-snackbar{
     width:360px;
