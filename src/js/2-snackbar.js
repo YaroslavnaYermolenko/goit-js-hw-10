@@ -9,11 +9,24 @@ form.addEventListener('submit', handlerSubmit);
 
 function handlerSubmit(e) {
   e.preventDefault();
+  const state = e.target.elements.state.value;
   delay = Number(delayInput.value);
-  console.log('delay', delay);
   const promise = new Promise((res, rej) => {
-    showAlert(radios[0].checked);
+    setTimeout(() => {
+      if (state === 'fulfilled') {
+        res(true);
+      } else {
+        rej(false);
+      }
+    }, delay);
   });
+  promise
+    .then(ok => {
+      showAlert(ok);
+    })
+    .catch(ok => {
+      showAlert(ok);
+    });
 }
 function showAlert(ok) {
   setTimeout(() => {
@@ -29,4 +42,3 @@ function showAlert(ok) {
     });
   }, delay);
 }
-

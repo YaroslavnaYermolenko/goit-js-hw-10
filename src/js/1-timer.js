@@ -11,7 +11,7 @@ const options = {
   minuteIncrement: 1,
   onClose(selectedDates) {
     if (selectedDates[0] < Date.now()) {
-      btnStart.disabled = timer.isActive;
+      btnStart.disabled = true;
       iziToast.error({
         title: 'Error',
         message: 'Please choose a date in the future',
@@ -19,7 +19,7 @@ const options = {
       });
     } else {
       userSelectedDate = selectedDates[0];
-      btnStart.disabled = timer.isActive;
+      btnStart.disabled = false;
     }
   },
 };
@@ -39,7 +39,6 @@ class Timer {
   stop() {
     clearInterval(this.intervalId);
     this.isActive = false;
-    btnStart.disabled = false;
     document.getElementById("datetime-picker").disabled = false;
     this.init();
   }
@@ -55,6 +54,7 @@ class Timer {
       const deltaTime = userSelectedDate - currentTime;
       if(deltaTime <= 0){
         this.stop();
+        console.log('userSelectedDate',userSelectedDate);
         iziToast.success({
           title: 'Success',
           message: 'Time has come!',
