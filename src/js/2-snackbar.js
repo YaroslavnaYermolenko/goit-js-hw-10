@@ -14,31 +14,30 @@ function handlerSubmit(e) {
   const promise = new Promise((res, rej) => {
     setTimeout(() => {
       if (state === 'fulfilled') {
-        res(true);
+        res();
       } else {
-        rej(false);
+        rej();
       }
     }, delay);
   });
   promise
-    .then(ok => {
-      showAlert(ok);
+    .then(() => {
+      showAlert('success');
     })
-    .catch(ok => {
-      showAlert(ok);
+    .catch(() => {
+      showAlert('error')
     });
 }
-function showAlert(ok) {
-  setTimeout(() => {
-    iziToast.show({
-      title: `${ok ? 'OK' : 'Error'}`,
-      titleColor: '#fff',
-      icon: `${ok ? 'ico-success' : 'ico-error'}`,
-      iconColor: '#fff',
-      message: `${ok ? 'Fullfilled' : 'Rejected'} promise in ${delay}ms`,
-      messageColor: '#fff',
-      color: `${ok ? '#59a10d' : '#ef4040'}`,
-      position: 'topRight',
-    });
-  }, delay);
+function showAlert(method) {
+  const ok = method==="success";
+  iziToast[method]({
+    title: `${ok ? 'OK' : 'Error'}`,
+    titleColor: '#fff',
+    icon: `${ok ? 'ico-success' : 'ico-error'}`,
+    iconColor: '#fff',
+    message: `${ok ? 'Fullfilled' : 'Rejected'} promise in ${delay}ms`,
+    messageColor: '#fff',
+    color: `${ok ? '#59a10d' : '#ef4040'}`,
+    position: 'topRight',
+  });
 }
